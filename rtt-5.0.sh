@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
 echo
-echo "=== azadrah.org ==="
-echo "=== https://github.com/azadrahorg ==="
-echo "=== RTT-Tunnel-Helper ==="
+echo "=== Kenzo ==="
+echo "=== Kenzo ==="
+echo "=== Kenzo ==="
 echo
 sleep 1
 
