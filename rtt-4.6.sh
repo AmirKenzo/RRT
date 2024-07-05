@@ -3,7 +3,7 @@
 echo
 echo "=== Kenzo ==="
 echo "=== Kenzo ==="
-echo "=== AmirKenzo ==="
+echo "=== Kenzo ==="
 echo
 sleep 1
 
@@ -166,7 +166,7 @@ case $CHS in
     rtt_instller
     externalserver
     echo
-    echo "=== Finished Kenzo==="
+    echo "=== Finished ==="
     echo
     sleep 3
     exit ;;
