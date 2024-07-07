@@ -3,7 +3,7 @@
 echo
 echo "=== Kenzo ==="
 echo "=== Kenzo ==="
-echo "=== AmirKenzo ==="
+echo "=== Amir ==="
 echo
 sleep 1
 
