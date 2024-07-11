@@ -32,7 +32,16 @@ Address='$iran_ipv6'/64
 Gateway='$outside_ipv6'
 EOF'
 
-    echo "Configuration is done."
+    echo "Restarting systemd-networkd..."
+    sudo systemctl restart systemd-networkd
+
+    echo "Configuring firewall to allow ICMP traffic..."
+    sudo ufw allow proto icmp
+
+    echo "Adding routes..."
+    sudo ip -6 route add $outside_ipv6 dev tunel01
+
+    echo "Configuration for Iran server is done."
 }
 
 # Function to configure the server outside Iran
@@ -67,7 +76,16 @@ Address='$outside_ipv6'/64
 Gateway='$iran_ipv6'
 EOF'
 
-    echo "Configuration is done."
+    echo "Restarting systemd-networkd..."
+    sudo systemctl restart systemd-networkd
+
+    echo "Configuring firewall to allow ICMP traffic..."
+    sudo ufw allow proto icmp
+
+    echo "Adding routes..."
+    sudo ip -6 route add $iran_ipv6 dev tunel01
+
+    echo "Configuration for outside server is done."
 }
 
 # Prompt the user for the server location
