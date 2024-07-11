@@ -20,7 +20,9 @@ network:
       mtu: 1500
 EOF'
 
-    echo "Applying netplan configuration..."
+    echo "Setting file permissions and applying netplan configuration..."
+    cd /etc/netplan
+    sudo chmod 600 *.yaml
     sudo netplan apply
 
     echo "Creating /etc/systemd/network/tun0.network..."
@@ -53,7 +55,9 @@ network:
       mtu: 1500
 EOF'
 
-    echo "Applying netplan configuration..."
+    echo "Setting file permissions and applying netplan configuration..."
+    cd /etc/netplan
+    sudo chmod 600 *.yaml
     sudo netplan apply
 
     echo "Creating /etc/systemd/network/tun0.network..."
